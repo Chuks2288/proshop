@@ -1,5 +1,6 @@
 const allowedOrigins = [
-    'http://localhost:3000'
+    'http://localhost:3000',
+    "https://proshop-r8h3.onrender.com"
 ]
 
 export default allowedOrigins;
