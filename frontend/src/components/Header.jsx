@@ -9,6 +9,7 @@ import logo from '../assets/logo.png';
 import { useLogoutMutation } from '../redux/slices/usersApiSlice';
 import { logout } from '../redux/slices/authSlice';
 import SearchBox from './SearchBox';
+import { resetCart } from '../redux/slices/cartSlice';
 
 const Header = () => {
 
@@ -26,6 +27,7 @@ const Header = () => {
         try {
             await logoutApiCall().unwrap();
             dispatch(logout());
+            dispatch(resetCart());
             navigate('/login');
         } catch (err) {
             console.log(err)
